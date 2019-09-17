@@ -1,7 +1,10 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
+import { compose } from 'redux';
+
 import './header.styles.scss';
 
-const Header = () => (
+const Header = ({ t, i18n }) => (
     <header id='header'>
         <nav className='header-navbar'>
             <div className='navbar-content'>
@@ -9,13 +12,11 @@ const Header = () => (
 
                 <div className='menu'>
                     <ul>
-                        <li>Home</li>
-                        <li>Pages</li>
-                        <li>Treks</li>
-                        <li>Gallery</li>
-                        <li>Blog</li>
-                        <li>Elements</li>
-                        <li>Contact </li>
+                        {
+                            Object.keys(t('header.menu')).map(key =>
+                                <li key={key}>{t(`header.menu.${key}`)}</li>
+                            )
+                        }
                     </ul>
                 </div>
             </div>
@@ -23,4 +24,7 @@ const Header = () => (
     </header>
 );
 
-export default Header;
+
+export default compose(
+    withTranslation('common')
+)(Header);
