@@ -1,17 +1,17 @@
 #header {
     width: 100vw;
-    height: 85vh;
+    height: 82vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
         url(../../images/header-background.jpg);
     background-size: cover;
     background-position: center;
 
     .header-navbar {
-        height: 80px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        height: 8rem;
+        border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
 
         .navbar-content {
-            width: 930px;
+            width: 93rem;
             margin: auto;
             height: 100%;
             //border: 1px solid red;
@@ -20,8 +20,8 @@
                 position: relative;
                 top: 50%;
                 transform: translateY(-50%);
-                height: 40px;
-                width: 86px;
+                height: 4rem;
+                width: 8.6rem;
                 background-image: url(../../images/logo_white.png);
                 background-size: cover;
                 float: left;
@@ -31,24 +31,26 @@
                 position: relative;
                 top: 50%;
                 transform: translateY(-50%);
-                height: 40px;
+                height: 4rem;
                 float: right;
-            }
 
-            .menu ul {
-                list-style-type: none;
-            }
+                ul {
+                    list-style: none;
+                }
 
-            .menu ul li {
-                float: left;
-                color: white;
-                margin-left: 30px;
-                font-size: 16px;
-                line-height: 26px;
-                font-family: "Open Sans", sans-serif;
-                font-weight: 400;
-                padding: 10px 0;
-                letter-spacing: 0.5px;
+                li {
+                    float: left;
+                    color: white;
+                    margin-left: 3rem;
+                    font-size: 1.6rem;
+                    line-height: 2.6rem;
+                    font-family: "Open Sans", sans-serif;
+                    font-weight: 4rem;
+                    padding: 1rem 0;
+                    letter-spacing: 0.05rem;
+                    cursor: pointer;
+                }
+
             }
 
         }

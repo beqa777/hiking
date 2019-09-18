@@ -1,0 +1,17 @@
+.text {
+    text-align: center;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+    margin: 5px;
+
+    p {
+        font-family: "Trirong", serif;
+        color: #6E6B66;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        font-weight: 300;
+    }
+
+}

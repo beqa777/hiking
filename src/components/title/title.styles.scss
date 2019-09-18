@@ -1,0 +1,38 @@
+@mixin center-element {
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+}
+
+.title {
+    width: 93rem;
+    @include center-element;
+    text-align: center;
+    padding: 1rem;
+    // margin: 1.5rem;
+
+    .line {
+        @include center-element;
+        width: 2px;
+        border: 1px solid #CBBD9A;
+        height: 40px;
+        margin: 5px;
+    }
+
+    .title-heading {
+        font-size: 26px;
+        line-height: 40px;
+        font-weight: 300;
+        text-shadow: 2px 2px 40px #888b8d;
+        text-transform: uppercase;
+    }
+
+    .text {
+        font-style: italic;
+        font-size: 16px;
+        line-height: 20px;
+        color: #6E6B66;
+
+    }
+
+}

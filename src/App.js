@@ -4,15 +4,14 @@ import i18n from './i18n';
 
 import './App.css';
 import Header from './components/header/header.component';
+import AboutUs from './components/about/about-component';
 
-const style = {
-  // border: '1px solid red'
-}
 
 const App = () => (
   <I18nextProvider i18n={i18n}>
-    <div style={style} id='app'>
+    <div id='app'>
       <Header />
+      <AboutUs />
     </div>
   </I18nextProvider>
 
