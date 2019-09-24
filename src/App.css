@@ -19,3 +19,12 @@ html {
   width: 100vw;
   font-family: "Montserrat", sans-serif;
 }
+
+.divStyle{
+  /* z-index: 10000; */
+  color : black;
+  pointer-events: none;
+  margin-top: -94%;
+  border : 1px solid green;
+  position: relative;
+}
