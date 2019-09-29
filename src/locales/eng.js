@@ -23,7 +23,33 @@ export default {
                     doloribus culpa ad iusto suscipit dolores, ex obcaecati molestias,
                     nulla consectetur dolore quas adipisci similique eaque provident,
                     officiis cum facere iure et temporibus reprehenderit, vero laudantium
-                    numquam qui odit. Dolor et inventore earum, deleniti!`
+                    numquam qui odit. Dolor et inventore earum, deleniti!`,
+
+            services: {
+                conditions: {
+                    title: 'In every conditions',
+                    icon: 'pd-icon-cloudy-day service',
+                    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dolorem harum aspernatur sapiente error, voluptas fuga,
+                    laudantium ullam magni fugit. Qui!`
+                },
+
+                team: {
+                    title: 'Professional Team',
+                    icon: 'pd-icon-camp-bag service',
+                    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dolorem harum aspernatur sapiente error, voluptas fuga,
+                    laudantium ullam magni fugit. Qui!`
+                },
+
+                hikers: {
+                    title: 'Expert hikers',
+                    icon: 'pd-icon-camping-knief service',
+                    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dolorem harum aspernatur sapiente error, voluptas fuga,
+                    laudantium ullam magni fugit. Qui!`
+                },
+            }
         }
     }
 };

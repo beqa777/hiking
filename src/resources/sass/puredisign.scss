@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "puredesign";
+    src: url("../fonts/puredesign.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+[data-icon]:before {
+    font-family: "puredesign" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="pd-icon-"]:before,
+[class*=" pd-icon-"]:before {
+    font-family: "puredesign" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.pd-icon-hour:before {
+    content: "\61";
+}
+
+.pd-icon-watch:before {
+    content: "\62";
+}
+
+.pd-icon-t-shirt:before {
+    content: "\63";
+}
+
+.pd-icon-sunrise:before {
+    content: "\64";
+}
+
+.pd-icon-sport-shoe:before {
+    content: "\65";
+}
+
+.pd-icon-mobile:before {
+    content: "\66";
+}
+
+.pd-icon-map-pin:before {
+    content: "\67";
+}
+
+.pd-icon-mail:before {
+    content: "\68";
+}
+
+.pd-icon-camera:before {
+    content: "\69";
+}
+
+.pd-icon-bad:before {
+    content: "\6a";
+}
+
+.pd-icon-camp-bag:before {
+    content: "\6b";
+}
+
+.pd-icon-camping-knief:before {
+    content: "\6c";
+}
+
+.pd-icon-cloud:before {
+    content: "\6d";
+}
+
+.pd-icon-cloudy-day:before {
+    content: "\6e";
+}
+
+.pd-icon-distance:before {
+    content: "\6f";
+}
+
+.pd-icon-fork-knife:before {
+    content: "\70";
+}
+
+.pd-icon-french-fries:before {
+    content: "\71";
+}
+
+.pd-icon-hotel-sign:before {
+    content: "\72";
+}
+
+.pd-icon-increasing-chart:before {
+    content: "\73";
+}
+
+.pd-icon-juice:before {
+    content: "\74";
+}
+
+.pd-icon-map-pin-streamline:before {
+    content: "\75";
+}
+
+.pd-icon-streamline-umbrella-weather:before {
+    content: "\76";
+}
+
+.pd-icon-cloud-1:before {
+    content: "\77";
+}
+
+.pd-icon-cloudy:before {
+    content: "\78";
+}
+
+.pd-icon-rain:before {
+    content: "\79";
+}
+
+.pd-icon-man-people-streamline-user:before {
+    content: "\7a";
+}
+
+.pd-icon-new:before {
+    content: "\41";
+}
+
+.pd-icon-money:before {
+    content: "\42";
+}
+
+.pd-icon-male:before {
+    content: "\43";
+}

@@ -2,13 +2,13 @@ import React from 'react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 
-import './App.css';
+import './App.scss';
 import Header from './components/header/header.component';
 import AboutUs from './components/about/about-component';
 import CarouselSlider from 'react-carousel-slider';
 import WithCarouselHolder from './components/carousel-holder/with-carousel-holder.component';
 import BackgroundImage from './components/background-image/background-image.component';
-
+import Service from './components/service/service.component';
 
 const App = () => {
   const accEleConfig = {
@@ -34,7 +34,7 @@ const App = () => {
   };
 
   let data = imageSources.map((imageUrl, index) => (
-    WithCarouselHolder(BackgroundImage)({ elWidth: 175, elHeight: 175, imageUrl })
+    WithCarouselHolder(BackgroundImage)({ elWidth: 175, elHeight: 175, imageUrl, style: { marginTop: '10px' } })
   ));
 
   return (
@@ -42,12 +42,14 @@ const App = () => {
       <div id='app'>
         <Header />
         <AboutUs />
-        {/* <div style={{ height: 300, backgroundColor: '#f7f7f7f7' }}></div> */}
+        <Service />
         <CarouselSlider
-          itemsStyle={{ margin: '0px 25px' }}
+          itemsStyle={{ margin: '0px 10px', height: '100%', background: 'white' }}
           sliderBoxStyle={sliderBoxStyleConf}
+          textBoxStyle={{ background: 'white' }}
           accEle={accEleConfig}
           slideCpnts={data} />
+
 
       </div>
     </I18nextProvider>

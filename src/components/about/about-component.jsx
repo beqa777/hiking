@@ -13,12 +13,6 @@ const AboutUs = ({ t }) => {
         <div className='about-us'>
             <Title {...t('descriptions.about')} />
             <Text text={t('texts.about')} style={{ width: '90rem' }} />
-
-            <div className='gray'>
-                <div className='content'>
-                    
-                </div>
-            </div>
         </div>
     )
 };
