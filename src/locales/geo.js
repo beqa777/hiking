@@ -15,6 +15,10 @@ export default {
             about: {
                 title: 'ჩვენ შესახებ',
                 text: 'ჩვენ ვართ ლიდერები hiking სფეროში'
+            },
+            trips: {
+                title: 'სამომავლო ტურები',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
             }
         },
 

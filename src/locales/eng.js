@@ -15,6 +15,10 @@ export default {
             about: {
                 title: 'About us',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            trips: {
+                title: 'FEATURED TRIPS',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
             }
         },
         texts: {

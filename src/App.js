@@ -9,6 +9,7 @@ import CarouselSlider from 'react-carousel-slider';
 import WithCarouselHolder from './components/carousel-holder/with-carousel-holder.component';
 import BackgroundImage from './components/background-image/background-image.component';
 import Service from './components/service/service.component';
+import ShowcaseTreks from './components/showcase-treks/showcase-treks.component';
 
 const App = () => {
   const accEleConfig = {
@@ -34,11 +35,11 @@ const App = () => {
   };
 
   let data = imageSources.map((imageUrl, index) => (
-    WithCarouselHolder(BackgroundImage)({ elWidth: 175, elHeight: 175, imageUrl, style: { marginTop: '10px' } })
+    WithCarouselHolder(BackgroundImage)({ elWidth: '175px', elHeight: '175px', imageUrl, style: { marginTop: '10px' } })
   ));
-
+ 
   return (
-    <I18nextProvider i18n={i18n}>
+    <I18nextProvider i18n={i18n}> 
       <div id='app'>
         <Header />
         <AboutUs />
@@ -49,7 +50,7 @@ const App = () => {
           textBoxStyle={{ background: 'white' }}
           accEle={accEleConfig}
           slideCpnts={data} />
-
+        <ShowcaseTreks />
 
       </div>
     </I18nextProvider>

@@ -2,7 +2,7 @@
     width: 100vw;
     height: 82vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
-        url(../../images/header-background.jpg);
+        url(../../resources/images/header-background.jpg);
     background-size: cover;
     background-position: center;
 
@@ -22,7 +22,7 @@
                 transform: translateY(-50%);
                 height: 4rem;
                 width: 8.6rem;
-                background-image: url(../../images/logo_white.png);
+                background-image: url(../../resources/images/logo_white.png);
                 background-size: cover;
                 float: left;
             }
