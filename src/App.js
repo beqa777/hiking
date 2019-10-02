@@ -11,6 +11,7 @@ import BackgroundImage from './components/background-image/background-image.comp
 import Service from './components/service/service.component';
 import ShowcaseTreks from './components/showcase-treks/showcase-treks.component';
 
+
 const App = () => {
   const accEleConfig = {
     button: false
@@ -37,9 +38,11 @@ const App = () => {
   let data = imageSources.map((imageUrl, index) => (
     WithCarouselHolder(BackgroundImage)({ elWidth: '175px', elHeight: '175px', imageUrl, style: { marginTop: '10px' } })
   ));
- 
+
+
+
   return (
-    <I18nextProvider i18n={i18n}> 
+    <I18nextProvider i18n={i18n}>
       <div id='app'>
         <Header />
         <AboutUs />
@@ -50,7 +53,9 @@ const App = () => {
           textBoxStyle={{ background: 'white' }}
           accEle={accEleConfig}
           slideCpnts={data} />
+
         <ShowcaseTreks />
+
 
       </div>
     </I18nextProvider>

@@ -8,7 +8,7 @@ const ImageHolder = styled.div`
         width: 100% !important;
         height: ${props => props.elHeight} !important;
     }
-    & :nth-child(2) {
+    > div {
        margin-top: -${props => props.elHeight} !important;
        z-index:10;
        position : absolute;

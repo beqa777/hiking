@@ -5,18 +5,18 @@ const TripInfo = () => (
     <TripInfoStyle>
         <Detail primary>
             <InfoHolder>
-                <div>1</div>
-                <div>Days</div>
+                <span>1</span>
+                <span>Days</span>
+            </InfoHolder>
+
+           <InfoHolder>
+                <span>20</span>
+                <span>Max Group Size</span>
             </InfoHolder>
 
             <InfoHolder>
-                <div>20</div>
-                <div>Max Group Size</div>
-            </InfoHolder>
-
-            <InfoHolder>
-                <div>Medium</div>
-                <div>Difficultly</div>
+                <span>Medium</span>
+                <span>Difficultly</span>
             </InfoHolder>
 
         </Detail>
@@ -25,7 +25,9 @@ const TripInfo = () => (
             Trekking Expedition
         </Detail>
 
-        <Detail primary>3
+        <Detail primary>
+            <span>Monte bianco</span>
+            <span>Courmayeur, France</span>
         </Detail>
     </TripInfoStyle>
 );

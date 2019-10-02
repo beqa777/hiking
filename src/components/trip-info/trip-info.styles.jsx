@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 export const TripInfoStyle = styled.div`
     background-color: white;
-    border: 1px solid green;
-    width: 100%;
-    height : 40%;
+    width: 100% !important;
+    height: 50% !important;
+    overflow: hidden;
     padding: 35px;
-
 
     > div {
         &:not(:last-child){
@@ -18,12 +17,33 @@ export const TripInfoStyle = styled.div`
             font-family: "Montserrat";
             font-size: 16px;
             text-transform: uppercase;
-            line-height: 25px;
+            line-height: 40px;
             color: #2F2911;
         }
 
-        &:last-child{
-            padding-top: 15px;
+        &:nth-child(3){
+            padding-top: 25px;
+            text-align: center;
+            text-transform: capitalize;
+
+            
+            & :first-child{
+                font-size: 18px;
+                text-align: center;
+                display: block; 
+                font-family: "Montserrat";
+                font-size: 16px;
+            }
+             
+            & :last-child{
+                font-size: 14px;
+                text-align: center;
+                display: block; 
+                margin-top: 5px;
+                color: #6E6B66;
+                font-family: "Montserrat";
+            }
+
         }
     }
 
@@ -31,27 +51,32 @@ export const TripInfoStyle = styled.div`
 
 export const Detail = styled.div`
     padding : 10px;
-    height: ${p => p.primary ? '38%' : '24%'} ;
+    display: block;
+    height: ${p => p.primary ? '35%' : '30%'} !important;
 `;
 
 export const InfoHolder = styled.div`
     float : left;
-    width: 33.3%;
-    div {
+    width: 33.3% !important;
+    span {
         width: 100%;
-        text-align: center;
+        text-align: center !important;
         font-family: "Montserrat";
 
         &:first-child{
-            line-height: 22px;
-            color: #ACA056;
+            color: #ACA056; 
+            box-sizing: border-box;
+            padding: 0px !important;
+            display : inline;
             letter-spacing: 0.5px;
             font-size : 22px;
+            display : block;
         }
 
         &:last-child{
+            display : block;
             font-size : 14px;
-            vertical-align: text-bottom;
+            color:red;
             color: #6E6B66;
             margin-top: 6px;
         }
