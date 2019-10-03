@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const TeamStyle = styled.div`
     width: 100%;
+    padding: 3rem;
     height: 63rem;
 `;
 
