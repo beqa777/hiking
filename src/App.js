@@ -9,6 +9,7 @@ import ShowcaseTreks from './components/showcase-treks/showcase-treks.component'
 import ImageGallery from './components/image-gallery/image-gallery.component';
 import Team from './components/team/team.component';
 import LatestBlog from './components/latest-blog/latest-blog.component';
+import Footer from './components/footer/footer.component';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <ShowcaseTreks />
         <Team />
         <LatestBlog />
+        <Footer />
       </div>
     </I18nextProvider>
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { LatestBlogStyle, BlogHolder, Blog, BlogInfo } from './latest-blog.style';
 import BackgroundImage from '../background-image/background-image.component';
 import Title from '../title/title.component';
-import Text from '../text/text.component';
 
 import blog1 from '../../resources/images/blog/blog2.jpg';
 import blog2 from '../../resources/images/blog/blog1.jpg';
