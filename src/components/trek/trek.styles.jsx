@@ -7,7 +7,7 @@ export const TrekStyle = styled.div`
    
     position: relative;
     cursor: pointer !important;
-    /* box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
 `;
 
 export const Price = styled.div`

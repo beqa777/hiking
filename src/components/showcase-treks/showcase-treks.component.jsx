@@ -22,6 +22,7 @@ const ShowcaseTreks = ({ t, elWidth, elHeight }) => {
                 accEle={{ button: false }}
                 sliderBoxStyle={{
                     height: '63rem',
+                    width: '100%',
                     background: '#F6F6F6'
                 }}
                 itemsStyle={{background: '#F6F6F6' }}
