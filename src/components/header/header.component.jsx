@@ -3,7 +3,7 @@ import { withTranslation } from 'react-i18next';
 import { compose } from 'redux';
 
 import './header.styles.scss';
-
+ 
 const Header = ({ t, i18n }) => (
     <header id='header'>
         <nav className='header-navbar'>
