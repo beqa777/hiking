@@ -15,12 +15,12 @@ const tripImageReducer = (state = INITIAL_STATE, action) => {
                 tripImages: action.payload
             }
 
-        // case tripImageTypes.GET_TRIP_IMAGES_FAILURE:
-        //     return {
-        //         ...state,
-        //         tripImages: [],
-        //         error: action.payload
-        //     }
+        case tripImageTypes.GET_TRIP_IMAGES_FAILURE:
+            return {
+                ...state,
+                tripImages: [],
+                error: action.payload
+            }
 
         default:
             return state;
