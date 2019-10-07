@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "eslint": "^6.2.2",
+    "firebase": "^7.1.0",
     "i18next": "^17.0.16",
     "i18next-browser-languagedetector": "^3.0.3",
     "node-sass": "^4.12.0",
