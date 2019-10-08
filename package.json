@@ -18,7 +18,6 @@
     "react-scripts": "^3.1.2",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
-    "redux-persist": "^5.10.0",
     "redux-saga": "^1.1.1",
     "reselect": "^4.0.0",
     "styled-components": "^4.4.0"

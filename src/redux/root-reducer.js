@@ -1,17 +1,10 @@
 import { combineReducers } from 'redux';
-import { persistReducer } from 'redux-persist';
 import tripImageReducer from './trip-image/trip-image.reducer';
-import storage from 'redux-persist/lib/storage';
-
-
-const persistConfig = {
-  key: 'persistStore',
-  storage,
-  whitelist: ['images']
-};
+import tripReducer from './trips/trip-reducer';
 
 const rootReducer = combineReducers({
-  tripImages: tripImageReducer
+  tripImages: tripImageReducer,
+  tripInfo: tripReducer
 });
 
-export default persistReducer(persistConfig, rootReducer);
+export default rootReducer;

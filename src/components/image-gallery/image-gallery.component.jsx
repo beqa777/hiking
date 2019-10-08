@@ -10,8 +10,8 @@ import { selectTripImages, selectIsLoading, selectError } from '../../redux/trip
 import CarouselSlider from 'react-carousel-slider';
 import WithCarouselHolder from '../carousel-holder/with-carousel-holder.component';
 import BackgroundImage from '../background-image/background-image.component';
-import { SpinnerOverlay, SpinnerContainer } from '../with-spinner/with-spinner.styles';
 import WithFailure from '../with-failure/with-failure.component';
+import WithSpinner from '../with-spinner/with-spinner.component';
 
 
 const ImageGallery = ({ getTripImages, tripImages, isLoading }) => {
@@ -31,16 +31,16 @@ const ImageGallery = ({ getTripImages, tripImages, isLoading }) => {
         WithCarouselHolder(BackgroundImage)({ elWidth: '175px', elHeight: '175px', imageUrl: element.path, style: { marginTop: '10px' } })
     ));
 
-    return isLoading ? (
-        <SpinnerOverlay elHeight='200px'>
-            <SpinnerContainer />
-        </SpinnerOverlay>) :
-        <CarouselSlider
-            itemsStyle={{ margin: '0px 10px', height: '100%', background: 'white' }}
-            sliderBoxStyle={sliderBoxStyleConf}
-            textBoxStyle={{ background: 'white' }}
-            accEle={{ button: false }}
-            slideCpnts={data} />
+    return (
+        WithSpinner(
+            <CarouselSlider
+                itemsStyle={{ margin: '0px 10px', height: '100%', background: 'white' }}
+                sliderBoxStyle={sliderBoxStyleConf}
+                textBoxStyle={{ background: 'white' }}
+                accEle={{ button: false }}
+                slideCpnts={data} />)({ elHeight: '200px', isLoading })
+    );
+
 };
 
 const mapStateToProps = createStructuredSelector({
