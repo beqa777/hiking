@@ -10,7 +10,6 @@ export function* fetchTrips() {
         const data = yield convertCollectionsToMap(ref);
         yield put(getTripsSuccess(data));
     } catch (error) {
-        debugger;
         yield put(getTripsFailure(error));
     }
 }

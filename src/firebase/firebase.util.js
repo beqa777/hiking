@@ -15,7 +15,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const convertCollectionsToMap = (collection) => {
-    return collection.docs.map(doc => doc.data());
+    let data = collection.docs.map(doc => doc.data());
+    if(data.length === 0) throw new Error('data is empty');
+    return data;
 }
 
 
