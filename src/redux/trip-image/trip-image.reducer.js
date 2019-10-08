@@ -1,24 +1,24 @@
 import tripImageTypes from './trip-image.types';
 
 const INITIAL_STATE = {
-    tripImages: [],
-    error: null
+    isLoading: true,
+    error: false,
+    images: []
 };
 
 const tripImageReducer = (state = INITIAL_STATE, action) => {
-
-
     switch (action.type) {
         case tripImageTypes.GET_TRIP_IMAGES_SUCCESS:
             return {
                 ...state,
-                tripImages: action.payload
+                images: action.payload,
+                isLoading: false
             }
 
         case tripImageTypes.GET_TRIP_IMAGES_FAILURE:
             return {
                 ...state,
-                tripImages: [],
+                images: [],
                 error: action.payload
             }
 

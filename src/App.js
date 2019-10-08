@@ -18,7 +18,7 @@ const App = () => {
         <Header />
         <AboutUs />
         <Service />
-        <ImageGallery />
+        <ImageGallery elHeight='200px'/>
         <ShowcaseTreks />
         <Team />
         <LatestBlog />

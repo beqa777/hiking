@@ -5,13 +5,13 @@ import storage from 'redux-persist/lib/storage';
 
 
 const persistConfig = {
-  key: 'root',
+  key: 'persistStore',
   storage,
   whitelist: ['images']
 };
 
 const rootReducer = combineReducers({
-  images: tripImageReducer
+  tripImages: tripImageReducer
 });
 
 export default persistReducer(persistConfig, rootReducer);
