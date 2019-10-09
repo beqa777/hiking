@@ -16,7 +16,7 @@ export const Price = styled.div`
     left: 36px;
     background-color: #CBBD9A;
     border-radius: 2px;
-    width: 13rem !important;
+    width: 13.5rem !important;
     height: 4rem !important;
     line-height: 40px;
     font-size: 12px;

@@ -11,7 +11,7 @@ const options = {
 
     //debug: true,
 
-    // lng: 'en',
+    //lng: 'eng',
 
     resources: {
         geo: {
@@ -23,7 +23,7 @@ const options = {
     },
 
     fallbackLng: 'eng',
-
+    load: 'languagesOnly',
     ns: ['common'],
 
     defaultNS: 'common',

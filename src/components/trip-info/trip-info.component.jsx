@@ -1,35 +1,42 @@
 import React from 'react';
 import { TripInfoStyle, Detail, InfoHolder } from './trip-info.styles';
+import { withTranslation } from 'react-i18next';
 
-const TripInfo = () => (
-    <TripInfoStyle>
-        <Detail primary>
-            <InfoHolder>
-                <span>1</span>
-                <span>Days</span>
-            </InfoHolder>
 
-           <InfoHolder>
-                <span>20</span>
-                <span>Max Group Size</span>
-            </InfoHolder>
+const TripInfo = ({ days, size, i18n, t, difficultly, ...otherParams }) => {
 
-            <InfoHolder>
-                <span>Medium</span>
-                <span>Difficultly</span>
-            </InfoHolder>
+    const lang = i18n.language;
 
-        </Detail>
+    return (
+        <TripInfoStyle>
+            <Detail primary>
+                <InfoHolder>
+                    <span>{days}</span>
+                    <span>{t('trips.days')}</span>
+                </InfoHolder>
 
-        <Detail>
-            Trekking Expedition
-        </Detail>
+                <InfoHolder>
+                    <span>{size}</span>
+                    <span>{t('trips.size')}</span>
+                </InfoHolder>
 
-        <Detail primary>
-            <span>Monte bianco</span>
-            <span>Courmayeur, France</span>
-        </Detail>
-    </TripInfoStyle>
-);
+                <InfoHolder>
+                    <span>{t(`trips.levels.${difficultly}`)}</span>
+                    <span>{t('trips.difficulty')}</span>
+                </InfoHolder>
 
-export default TripInfo;
+            </Detail>
+
+            <Detail>
+                {otherParams[`title_${lang}`]}
+            </Detail>
+
+            <Detail primary>
+                <span>{otherParams[`location_title_${lang}`]}</span>
+                <span>{otherParams[`location_${lang}`]}</span>
+            </Detail>
+        </TripInfoStyle>
+    )
+};
+
+export default withTranslation('common')(TripInfo);

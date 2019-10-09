@@ -54,6 +54,17 @@ export default {
                             laudantium ullam magni fugit. Qui!`
                 }
             }
+        },
+
+        trips: {
+            levels: {
+                1: "მარტივი",
+                2: "საშვალო",
+                3: "რთული"
+            },
+            days: "დღეები",
+            size: "ჯგუფის ზომა",
+            difficulty: "სირთულე"
         }
     }
 }

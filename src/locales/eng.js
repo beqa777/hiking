@@ -54,6 +54,16 @@ export default {
                     laudantium ullam magni fugit. Qui!`
                 },
             }
+        },
+        trips: {
+            levels: {
+                1: "easy",
+                2: "medium",
+                3: "hard"
+            },
+            days: "Days",
+            size: "Max Group Size",
+            difficulty: "Difficulty"
         }
     }
 };
