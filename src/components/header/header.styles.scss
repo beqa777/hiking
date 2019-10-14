@@ -1,59 +1,59 @@
-#header {
-    width: 100vw;
-    height: 82vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
-        url(../../resources/images/header-background.jpg);
+.slide-container {
+  width: 100vw;
+  height: 82vh;
+
+  .header {
+    width: 100%;
+    height: 82vh !important;
     background-size: cover;
     background-position: center;
 
     .header-navbar {
-        height: 8rem;
-        border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+      height: 8rem;
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
 
-        .navbar-content {
-            width: 93rem;
-            margin: auto;
-            height: 100%;
-            //border: 1px solid red;
+      .navbar-content {
+        width: 93rem;
+        margin: auto;
+        height: 100%;
+        //border: 1px solid red;
 
-            .logo {
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-                height: 4rem;
-                width: 8.6rem;
-                background-image: url(../../resources/images/logo_white.png);
-                background-size: cover;
-                float: left;
-            }
-
-            .menu {
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-                height: 4rem;
-                float: right;
-
-                ul {
-                    list-style: none;
-                }
-
-                li {
-                    float: left;
-                    color: white;
-                    margin-left: 3rem;
-                    font-size: 1.6rem;
-                    line-height: 2.6rem;
-                    font-family: "Open Sans", sans-serif;
-                    font-weight: 4rem;
-                    padding: 1rem 0;
-                    letter-spacing: 0.05rem;
-                    cursor: pointer;
-                }
-
-            }
-
+        .logo {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 4rem;
+          width: 8.6rem;
+          background-image: url(../../resources/images/logo_white.png);
+          background-size: cover;
+          float: left;
         }
 
+        .menu {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 4rem;
+          float: right;
+
+          ul {
+            list-style: none;
+          }
+
+          li {
+            float: left;
+            color: white;
+            margin-left: 3rem;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 4rem;
+            padding: 1rem 0;
+            letter-spacing: 0.05rem;
+            cursor: pointer;
+          }
+        }
+      }
     }
+  }
 }

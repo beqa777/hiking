@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import './App.scss';
+import './resources/sass/social-media.scss';
+
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import Header from './components/header/header.component';
