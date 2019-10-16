@@ -2,7 +2,7 @@ import React from 'react';
 
 export const HeaderContent = ({ image, t }) => (
     <div className="header" style={{ 'backgroundImage': `url(${image})` }}>
-        <nav className='header-navbar'>
+        {/* <nav className='header-navbar'>
             <div className='navbar-content'>
                 <div className='logo' />
                 <div className='menu'>
@@ -15,7 +15,7 @@ export const HeaderContent = ({ image, t }) => (
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> */}
     </div>
 );
 

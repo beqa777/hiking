@@ -16,10 +16,27 @@ const Header = ({ t, i18n }) => {
         infinite: true,
         arrows: true,
     }
-    
+
     return (
 
+
         <div className="slide-container">
+
+            <nav className='navbar'>
+                <div className='navbar-content'>
+                    <div className='logo' />
+                    <div className='menu'>
+                        <ul>
+                            {
+                                Object.keys(t('header.menu')).map(key =>
+                                    <li key={key}>{t(`header.menu.${key}`)}</li>
+                                )
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
             <Slide {...properties}>
                 <div className="each-slide">
                     <HeaderContent t={t} image={image1} />
@@ -29,25 +46,6 @@ const Header = ({ t, i18n }) => {
                 </div>
             </Slide>
         </div>
-
-        /*<header id='header'>
-              <nav className='header-navbar'>
-                  <div className='navbar-content'>
-                      <div className='logo' />
-      
-                      <div className='menu'>
-                          <ul>
-                              {
-                                  Object.keys(t('header.menu')).map(key =>
-                                      <li key={key}>{t(`header.menu.${key}`)}</li>
-                                  )
-                              }
-                          </ul>
-                      </div>
-                  </div>
-              </nav>
-          </header>
-          */
     )
 };
 

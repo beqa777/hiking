@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import './App.scss';
@@ -12,21 +12,33 @@ import HomePage from './pages/homepage/HomePage.component';
 import TripDetail from './pages/trip-detail/trip-detail.component';
 
 const App = () => {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  let changeScroll = () => {
+    debugger;
+    console.log(window);
+
+  };
+
   return (
-    <I18nextProvider i18n={i18n}>
-      <Header />
+    <div id="#app" onScroll={changeScroll}>
+      <I18nextProvider i18n={i18n}>
+        <Header scrolled={scrolled} />
 
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/trip/:tripId" component={TripDetail} />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/trip/:tripId" component={TripDetail} />
 
-        {/* if none of the routes matches */}
-        <Route render={() => <Redirect to="/" />} />
+          {/* if none of the routes matches */}
+          <Route render={() => <Redirect to="/" />} />
 
-      </Switch>
+        </Switch>
 
-      <Footer />
-    </I18nextProvider>
+        <Footer />
+      </I18nextProvider>
+    </div>
+
 
   )
 };
