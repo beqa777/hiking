@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import './App.scss';
@@ -12,19 +13,16 @@ import HomePage from './pages/homepage/HomePage.component';
 import TripDetail from './pages/trip-detail/trip-detail.component';
 
 const App = () => {
-
   const [scrolled, setScrolled] = useState(false);
-
-  let changeScroll = () => {
-    debugger;
-    console.log(window);
-
+  let changeScroll = (event) => {
+    const scrollTop = event.nativeEvent.target.scrollTop;
+    setScrolled(scrollTop > 0);
   };
 
   return (
-    <div id="#app" onScroll={changeScroll}>
+    <div className="appContainer" onScroll={changeScroll}>
       <I18nextProvider i18n={i18n}>
-        <Header scrolled={scrolled} />
+        <Header scroll={scrolled ? 1 : undefined} />
 
         <Switch>
           <Route exact path="/" component={HomePage} />
@@ -38,9 +36,16 @@ const App = () => {
         <Footer />
       </I18nextProvider>
     </div>
-
-
   )
 };
 
+// const mapStateToProps = createStructuredSelector({
+//     s
+// });
+
+// const mapDispatchToProps = dispatch => ({
+//   setScroll: (scroll) => dispatch(setScroll(scroll));
+// })
+
 export default App;
+// export default connect(null, mapDispatchToProps)(App);
