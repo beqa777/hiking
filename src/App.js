@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import './App.scss';
@@ -13,16 +12,10 @@ import HomePage from './pages/homepage/HomePage.component';
 import TripDetail from './pages/trip-detail/trip-detail.component';
 
 const App = () => {
-  const [scrolled, setScrolled] = useState(false);
-  let changeScroll = (event) => {
-    const scrollTop = event.nativeEvent.target.scrollTop;
-    setScrolled(scrollTop > 0);
-  };
-
   return (
-    <div className="appContainer" onScroll={changeScroll}>
+    <div className="appContainer">
       <I18nextProvider i18n={i18n}>
-        <Header scroll={scrolled ? 1 : undefined} />
+        <Header />
 
         <Switch>
           <Route exact path="/" component={HomePage} />

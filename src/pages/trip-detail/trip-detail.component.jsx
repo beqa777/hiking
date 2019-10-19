@@ -8,10 +8,10 @@ import { getTripDetailStart, getTripDetailClean } from '../../redux/trip-detail/
 import { selectInfo } from '../../redux/trip-detail/trip-detail.selectors';
 
 import AboutTrip from '../../components/trip-detail/about-trip/about-trip.component';
+import TripDescription from '../../components/trip-detail/trip-description/trip-description.component';
 
 const TripDetail = ({ getTrips, tripClean, tripInfo }) => {
-    console.log(tripInfo);
-    
+
     const { tripId } = useParams();
     useEffect(() => {
         getTrips(tripId);
@@ -23,8 +23,11 @@ const TripDetail = ({ getTrips, tripClean, tripInfo }) => {
     }, [getTrips, tripClean, tripId])
 
     return (
-        <AboutTrip />
-    )
+        <React.Fragment>
+            <AboutTrip />
+            <TripDescription tripInfo={tripInfo} />
+        </React.Fragment>
+    );
 };
 
 const mapStateToProps = createStructuredSelector({

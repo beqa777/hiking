@@ -7,7 +7,7 @@ import logoImageBlack from '../../../resources/images/logo_black.png';
 
 export const NavbarStyle = styled.nav`
     transition: all 0.6s ease-in;
-    width: calc(100% - 17px);
+    width: 100%;
     height: 8rem;
     background-color: ${p => p.scroll ? 'white' : 'none'};
     z-index: 10;
