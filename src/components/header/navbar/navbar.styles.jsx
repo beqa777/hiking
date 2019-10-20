@@ -10,7 +10,7 @@ export const NavbarStyle = styled.nav`
     width: 100%;
     height: 8rem;
     background-color: ${p => p.scroll ? 'white' : 'none'};
-    z-index: 10;
+    z-index: 100;
     position: fixed;
     border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
 `;

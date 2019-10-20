@@ -12,7 +12,7 @@ export const selectIsLoading = createSelector(
     detail => detail.isLoading
 );
 
-export const selectError = createSelector(
+export const selectInfoError = createSelector(
     [selectTripDetail],
     detail => detail.error
 );

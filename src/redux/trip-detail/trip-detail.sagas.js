@@ -3,10 +3,10 @@ import tripDetailTypes from './trip-detail.type';
 import { getTripDetailSuccess, getTripDetailFailure } from './trip-details.actions';
 import { firestore, convertCollectionsToMap } from '../../firebase/firebase.util'
 
-function* fetchTripDetails() {
+function* fetchTripDetails({payload}) {
     try {
         const ref = firestore.collection('trips');
-        const doc = yield ref.where('unic_slug', '==', 'monte_bianco');
+        const doc = yield ref.where('unic_slug', '==', payload);
         const res = yield doc.get();
         const data = yield convertCollectionsToMap(res)[0];
         yield put(getTripDetailSuccess(data));

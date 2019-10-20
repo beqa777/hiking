@@ -1,9 +1,11 @@
 import React from 'react';
 import './text.styles.scss';
 
-const Text = ({ text, style }) => (
+const Text = ({ text, style, isHtml }) => (
     <div className='text' style={style}>
-        <p>{text}</p>
+        {
+            isHtml ? <div dangerouslySetInnerHTML={{ __html: text }}></div> : <p>{text}</p>
+        }
     </div>
 );
 

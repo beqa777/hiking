@@ -1,7 +1,7 @@
 import tripDetailTypes from './trip-detail.type';
 
 const INITIAL_STATE = {
-    info: null,
+    info: {},
     error: null,
     isLoading: true
 }
@@ -27,7 +27,7 @@ const tripDetailReducer = (state = INITIAL_STATE, action) => {
         case tripDetailTypes.TRIP_DETAIL_CLEAN:
             return {
                 ...state,
-                info: null,
+                info: {},
                 error: null,
                 isLoading: true
             }

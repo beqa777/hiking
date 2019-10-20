@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import { ShowcaseTreksStyle } from './showcase-treks.styles';
 
@@ -23,8 +24,18 @@ const ShowcaseTreks = ({ t, elWidth, elHeight, getTrips, trips, isLoading }) => 
         getTrips()
     }, [getTrips])
 
+    const history = useHistory();
+
     const treksData = trips.map(trip => {
-        return WithCarouselHolder(Trek)({ elWidth: '46rem', elHeight: '52rem', ...trip })
+
+        return WithCarouselHolder(Trek)({
+            elWidth: '46rem',
+            elHeight: '52rem',
+            click: () => {
+                history.push(`/trip/${trip.unic_slug}`);
+            },
+            ...trip
+        })
     });
 
     return (
@@ -37,6 +48,10 @@ const ShowcaseTreks = ({ t, elWidth, elHeight, getTrips, trips, isLoading }) => 
                         height: '63rem',
                         width: '100%',
                         background: '#F6F6F6'
+                    }}
+                    manner={{
+                        autoSliding: { interval: '5s' },
+                        duration: '1s'
                     }}
                     itemsStyle={{ background: '#F6F6F6' }}
                     textBoxStyle={{ background: '#F6F6F6' }}

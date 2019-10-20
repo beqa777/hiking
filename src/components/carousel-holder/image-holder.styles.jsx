@@ -7,6 +7,7 @@ const ImageHolder = styled.div`
     img {
         width: 100% !important;
         height: ${props => props.elHeight} !important;
+        cursor: pointer;
     }
     > div {
        margin-top: -${props => props.elHeight} !important;

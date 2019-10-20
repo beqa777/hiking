@@ -6,7 +6,7 @@ const WithFailure = (WrappedComponent) => ({ error = false, ...otherProps }) => 
         error ? (
             <WithFailureStyle {...otherProps}>
                 ამჟამათ ამ მონაცემების ჩვენება შეუძლებელია
-        </WithFailureStyle>) :
+            </WithFailureStyle>) :
             (<WrappedComponent {...otherProps} />)
 
     )
