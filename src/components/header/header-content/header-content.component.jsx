@@ -1,9 +1,19 @@
 import React from 'react';
-import {HeaderContentStyle} from './header-content.styles';
+import { HeaderContentStyle, HeaderContentHolder, HeaderTitle, HeaderText } from './header-content.styles';
 
-export const HeaderContent = ({ image }) => (
-    <HeaderContentStyle image={image}>
-    </HeaderContentStyle>
-);
+export const HeaderContent = ({ image, title, text, sliding }) => {
+    return (
+        <HeaderContentStyle image={image}>
+            {
+                !sliding ?
+                    <HeaderContentHolder>
+                        <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
+                        <HeaderText>{text}</HeaderText>
+                    </HeaderContentHolder> : null
+            }
+
+        </HeaderContentStyle>
+    )
+};
 
 export default HeaderContent;

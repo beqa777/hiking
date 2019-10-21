@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "eslint": "^6.5.1",
-    "firebase": "^7.1.0",
-    "i18next": "^17.0.18",
+    "firebase": "^7.2.1",
+    "i18next": "^17.2.0",
     "i18next-browser-languagedetector": "^3.1.1",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",

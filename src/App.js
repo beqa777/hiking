@@ -46,13 +46,4 @@ const App = () => {
   )
 };
 
-// const mapStateToProps = createStructuredSelector({
-//     s
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   setScroll: (scroll) => dispatch(setScroll(scroll));
-// })
-
 export default App;
-// export default connect(null, mapDispatchToProps)(App);

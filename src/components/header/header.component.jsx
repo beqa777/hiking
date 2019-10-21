@@ -22,22 +22,47 @@ import image2 from '../../resources/images/backImage2.jpg';
 import './header.styles.scss';
 
 const Header = ({ t, tripInfo }) => {
-    let [scroll, setScroll] = useState(false);
     const location = useLocation();
+    let [scroll, setScroll] = useState(false);
+    let [sliding, setSliding] = useState(false);
 
     useEffect(() => {
+        setTimeout(() => {
+            if (!sliding) {
+                setSliding(true);
+            }
+        }, 9000);
         window.addEventListener('scroll', function (event) {
             setScroll(window.scrollY > 0);
         });
+
         setScroll(window.scrollY > 0);
 
-    }, []);
+        //add event on slideshow next, back buttons (programmer was to lazy to implement its own)
+
+        const navbarNext = document.querySelector('[data-type="next"]');
+        const navbarPrev = document.querySelector('[data-type="prev"]');
+        navbarNext.addEventListener("click", () => {
+            setSliding(true);
+        });
+        navbarPrev.addEventListener("click", () => {
+            setSliding(true);
+        });
+
+    }, [setSliding, setScroll]);
 
     const properties = {
         duration: 9000,
         transitionDuration: 1500,
         infinite: true,
         arrows: true,
+        //sliding animation is over
+        onChange: () => {
+            setTimeout(() => {
+                setSliding(true);
+            }, 9000);
+            setSliding(false);
+        }
     }
 
     return (
@@ -50,10 +75,22 @@ const Header = ({ t, tripInfo }) => {
                     (<div className="slide-container">
                         <Slide {...properties}>
                             <div className="each-slide">
-                                <HeaderContent t={t} image={image1} />
+                                <HeaderContent
+                                    sliding={sliding}
+                                    t={t}
+                                    image={image1}
+                                    title="Wild nature <br/> safe adventure"
+                                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde veniam aperiam rerum quis atque, illum."
+                                />
                             </div>
                             <div className="each-slide">
-                                <HeaderContent t={t} image={image2} />
+                                <HeaderContent
+                                    sliding={sliding}
+                                    t={t}
+                                    image={image2}
+                                    title="Le Brévent - Point Noire de Pormenaz"
+                                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde veniam aperiam rerum quis atque, illum."
+                                />
                             </div>
                         </Slide>
                     </div>)
