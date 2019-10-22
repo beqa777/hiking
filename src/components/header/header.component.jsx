@@ -21,17 +21,26 @@ import image1 from '../../resources/images/header-background.jpg';
 import image2 from '../../resources/images/backImage2.jpg';
 import './header.styles.scss';
 
-const Header = ({ t, tripInfo }) => {
+const Header = ({ t, i18n, tripInfo }) => {
+    const lang = i18n.language;
+
+    // location
     const location = useLocation();
+
     let [scroll, setScroll] = useState(false);
     let [sliding, setSliding] = useState(false);
+    let [slidingTimeOutId, setSlidingTimeOutId] = useState(undefined);
 
+    // constructor
     useEffect(() => {
-        setTimeout(() => {
-            if (!sliding) {
-                setSliding(true);
-            }
-        }, 9000);
+        // if we go to home page state must to be sync to original header component state
+        // so i reset sliding and slidetemeout
+        // console.log(slidingTimeOutId);
+
+        setSliding(false);
+        setSlidingTimeOutId(undefined);
+        clearTimeout(slidingTimeOutId);
+
         window.addEventListener('scroll', function (event) {
             setScroll(window.scrollY > 0);
         });
@@ -39,17 +48,20 @@ const Header = ({ t, tripInfo }) => {
         setScroll(window.scrollY > 0);
 
         //add event on slideshow next, back buttons (programmer was to lazy to implement its own)
+        if (location.pathname === "/") { // if we are in home page
+            setSlidingTimeOutId(setTimeout(() => {
+                setSliding(true);
+            }, 9000));
 
-        const navbarNext = document.querySelector('[data-type="next"]');
-        const navbarPrev = document.querySelector('[data-type="prev"]');
-        navbarNext.addEventListener("click", () => {
-            setSliding(true);
-        });
-        navbarPrev.addEventListener("click", () => {
-            setSliding(true);
-        });
+            const navbarNext = document.querySelector('[data-type="next"]');
+            const navbarPrev = document.querySelector('[data-type="prev"]');
+            navbarNext.addEventListener("click", () => setSliding(true));
+            navbarPrev.addEventListener("click", () => setSliding(true));
+        }
 
-    }, [setSliding, setScroll]);
+    // i need to use slidingTimeOutId but it will get looped if include as dependencies
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [setSliding, setScroll, tripInfo, location]);
 
     const properties = {
         duration: 9000,
@@ -58,9 +70,12 @@ const Header = ({ t, tripInfo }) => {
         arrows: true,
         //sliding animation is over
         onChange: () => {
-            setTimeout(() => {
+            // stopping last timeout
+            clearTimeout(slidingTimeOutId);
+            
+            setSlidingTimeOutId(setTimeout(() => {
                 setSliding(true);
-            }, 9000);
+            }, 9000));
             setSliding(false);
         }
     }
@@ -70,7 +85,7 @@ const Header = ({ t, tripInfo }) => {
             <Navbar t={t} scroll={scroll ? 1 : undefined} />
             {
                 location.pathname !== "/" ?
-                    (<HeaderContent t={t} image={tripInfo.imageUrl} />)
+                    (<HeaderContent t={t} title={tripInfo[`location_${lang}`]} text={tripInfo[`title_${lang}`]} image={tripInfo.imageUrl} />)
                     :
                     (<div className="slide-container">
                         <Slide {...properties}>
