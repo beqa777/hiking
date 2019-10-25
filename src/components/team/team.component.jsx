@@ -2,14 +2,15 @@ import React from 'react';
 import Title from '../title/title.component';
 import { TeamStyle, TeamHolder, TeamMember, MemberInfo } from './team.styles';
 import BackgroundImage from '../background-image/background-image.component';
+import { withTranslation } from 'react-i18next';
 import hiker1 from '../../resources/images/team/hiker1.jpg';
 import hiker2 from '../../resources/images/team/hiker2.jpg';
 import hiker3 from '../../resources/images/team/hiker3.jpg';
 
-const Team = () => {
+const Team = ({ t }) => {
     return (
         <TeamStyle>
-            <Title title="OUR FABULOUS TEAM" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit" />
+            <Title title={t('descriptions.team.title')} text={t('descriptions.team.text')} />
             <TeamHolder>
                 <TeamMember>
                     <BackgroundImage elWidth="100%" elHeight="29rem" imageUrl={hiker1} />
@@ -41,4 +42,4 @@ const Team = () => {
     );
 };
 
-export default Team;
+export default withTranslation('common')(Team);

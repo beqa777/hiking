@@ -13,6 +13,7 @@
     "react": "^16.10.2",
     "react-carousel-slider": "^2.0.13",
     "react-dom": "^16.10.2",
+    "react-flags-select": "^1.1.10",
     "react-i18next": "^10.13.1",
     "react-moment": "^0.9.6",
     "react-redux": "^7.1.0",

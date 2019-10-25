@@ -2,13 +2,13 @@ import React from 'react';
 import { LatestBlogStyle, BlogHolder, Blog, BlogInfo } from './latest-blog.style';
 import BackgroundImage from '../background-image/background-image.component';
 import Title from '../title/title.component';
-
+import { withTranslation } from 'react-i18next';
 import blog1 from '../../resources/images/blog/blog2.jpg';
 import blog2 from '../../resources/images/blog/blog1.jpg';
 
-const LatestBlog = () => (
+const LatestBlog = ({ t }) => (
     <LatestBlogStyle>
-        <Title title="LATEST OF OUR BLOG" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit" />
+        <Title title={t('descriptions.latestBlogs.title')} text={t('descriptions.latestBlogs.text')} />
         <BlogHolder>
             <Blog>
                 <BackgroundImage elWidth="50%" elHeight="100%" imageUrl={blog1} />
@@ -40,4 +40,4 @@ const LatestBlog = () => (
     </LatestBlogStyle>
 );
 
-export default LatestBlog;
+export default withTranslation('common')(LatestBlog);

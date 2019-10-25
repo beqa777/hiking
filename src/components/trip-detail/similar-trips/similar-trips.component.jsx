@@ -8,12 +8,13 @@ import { getTripsStart } from '../../../redux/trips/trip.actions';
 import { selectTrips } from '../../../redux/trips/trip.selector';
 import WithCarouselHolder from '../../carousel-holder/with-carousel-holder.component';
 import Title from '../../title/title.component';
+import {withTranslation} from 'react-i18next';
 
 import { SimilarTripsStyle, SimilarTripsHolder } from './similar-trips.styles';
 
-const SimilarTrips = ({ trips, getTrips, filteredSlug }) => {
+const SimilarTrips = ({ t, trips, getTrips, filteredSlug }) => {
 
-    const history = useHistory();
+    const history = useHistory(); 
 
     // when trips is ready
     if (trips) {
@@ -28,7 +29,7 @@ const SimilarTrips = ({ trips, getTrips, filteredSlug }) => {
 
     return (
         <SimilarTripsStyle>
-            <Title title="similar trips" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit"/>
+            <Title title={t('descriptions.similarTrips.title')} text={t('descriptions.similarTrips.text')} />
             <SimilarTripsHolder>
                 {
                     trips.map(trip => (
@@ -60,5 +61,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default compose(
-    connect(mapStateToProps, mapDispatchToProps)
+    connect(mapStateToProps, mapDispatchToProps),
+    withTranslation('common')
 )(SimilarTrips);

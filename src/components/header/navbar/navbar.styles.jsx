@@ -16,7 +16,7 @@ export const NavbarStyle = styled.nav`
 `;
 
 export const NavbarContent = styled.div`
-    width: 93rem;
+    width: 95rem;
     margin: auto;
     height: 100%;
 `;
@@ -55,4 +55,40 @@ export const Menu = styled.div`
         letter-spacing: 0.05rem;
         cursor: pointer;
     }
+`;
+
+export const FlagHolderStyle = styled.div`
+    position: relative;
+    top: 50%;
+    margin-left: 10px;
+    float: right;
+    width: 100px;
+    transform: translateY(-50%) !important;
+    padding-top: 5px;
+
+    * {
+        font-size: 15px !important;
+    }
+
+    .flag-select {
+        position: relative;
+        display: inline-block;
+        vertical-align: inherit;
+        padding-bottom: 5px;
+        color: ${ p => p.scroll ? '#4d4d4d' : 'white'};
+        font-weight: bold;
+        text-align: left;
+
+        .arrow-down {
+            color: ${ p => p.scroll ? '#4d4d4d' : 'white'};
+        }
+
+        .flag-option .country-label {
+            color: ${ p => '#4d4d4d'};
+            padding: 0 9px;
+        }
+    }
+
+    
+    
 `;

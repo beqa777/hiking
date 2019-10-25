@@ -59,8 +59,8 @@ const Header = ({ t, i18n, tripInfo }) => {
             navbarPrev.addEventListener("click", () => setSliding(true));
         }
 
-    // i need to use slidingTimeOutId but it will get looped if include as dependencies
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // i need to use slidingTimeOutId but it will get looped if include as dependencies
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [setSliding, setScroll, tripInfo, location]);
 
     const properties = {
@@ -72,7 +72,7 @@ const Header = ({ t, i18n, tripInfo }) => {
         onChange: () => {
             // stopping last timeout
             clearTimeout(slidingTimeOutId);
-            
+
             setSlidingTimeOutId(setTimeout(() => {
                 setSliding(true);
             }, 9000));
@@ -82,7 +82,7 @@ const Header = ({ t, i18n, tripInfo }) => {
 
     return (
         <React.Fragment>
-            <Navbar t={t} scroll={scroll ? 1 : undefined} />
+            <Navbar t={t} i18n={i18n} scroll={scroll ? 1 : undefined} />
             {
                 location.pathname !== "/" ?
                     (<HeaderContent t={t} title={tripInfo[`location_${lang}`]} text={tripInfo[`title_${lang}`]} image={tripInfo.imageUrl} />)
@@ -94,8 +94,8 @@ const Header = ({ t, i18n, tripInfo }) => {
                                     sliding={sliding}
                                     t={t}
                                     image={image1}
-                                    title="Wild nature <br/> safe adventure"
-                                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde veniam aperiam rerum quis atque, illum."
+                                    title={t('header.quotes.first.title')}
+                                    text={t('header.quotes.first.text')}
                                 />
                             </div>
                             <div className="each-slide">
@@ -103,8 +103,8 @@ const Header = ({ t, i18n, tripInfo }) => {
                                     sliding={sliding}
                                     t={t}
                                     image={image2}
-                                    title="Le Brévent - Point Noire de Pormenaz"
-                                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde veniam aperiam rerum quis atque, illum."
+                                    title={t('header.quotes.second.title')}
+                                    text={t('header.quotes.second.text')}
                                 />
                             </div>
                         </Slide>

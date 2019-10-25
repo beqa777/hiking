@@ -9,6 +9,16 @@ export default {
                 blog: "პოსტები",
                 elements: "ელემენტები",
                 contact: "კონტაქტი"
+            },
+            quotes: {
+                first: {
+                    title: 'ველური ბუნება უსაფრთხო მგზავრობა',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde veniam aperiam rerum quis atque, illum.'
+                },
+                second: {
+                    title: 'საუკეთესო ხედს ნახავ ურთულეს ბილიკზე',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde veniam aperiam rerum quis atque, illum.'
+                }
             }
         },
         descriptions: {
@@ -18,6 +28,26 @@ export default {
             },
             trips: {
                 title: 'სამომავლო ტურები',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            gallery: {
+                title: 'გალერია',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            similarTrips: {
+                title: 'მსგავსი სიახლეეები',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            moreInfo: {
+                title: 'დამატებითი ინფორმაცია',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            team: {
+                title: 'ჩვენი ჯგუფი',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            latestBlogs: {
+                title: 'ბოლო ბლოგები',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
             }
         },

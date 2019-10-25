@@ -3,8 +3,9 @@ import Moment from 'react-moment';
 import { TripDescriptionStyle, DescriptionHolder, InfoIconHolder, InfoIcon, TextHolder } from './trip-description.styles';
 import Title from '../../title/title.component';
 import Text from '../../text/text.component';
+import {withTranslation} from 'react-i18next';
 
-const TripDescription = ({ tripInfo }) => {
+const TripDescription = ({ t, tripInfo }) => {
 
     const tripInfoIcons = {
         price: 'pd-icon-money',
@@ -19,7 +20,7 @@ const TripDescription = ({ tripInfo }) => {
 
     return (
         <TripDescriptionStyle>
-            <Title title="MORE INFO" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit" />
+            <Title title={t('descriptions.moreInfo.title')} text={t('descriptions.moreInfo.text')} />
             <DescriptionHolder>
                 <InfoIconHolder>
                     {
@@ -31,8 +32,10 @@ const TripDescription = ({ tripInfo }) => {
                                     <Moment format="YYYY/MM/DD">
                                         {tripDate}
                                     </Moment>
-                                ) : tripInfo[key]
-                                }</h3>
+                                ) : key === "difficultly" ? (
+                                    t(`trips.levels.${tripInfo.difficultly}`)
+                                ): tripInfo[key] }
+                                </h3>
                             </InfoIcon>
                         ))
                     }
@@ -45,4 +48,4 @@ const TripDescription = ({ tripInfo }) => {
     )
 };
 
-export default TripDescription;
+export default withTranslation('common')(TripDescription);

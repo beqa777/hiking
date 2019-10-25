@@ -9,8 +9,19 @@ export default {
                 blog: "Blog",
                 elements: "Elements",
                 contact: "Contact"
+            },
+            quotes: {
+                first: {
+                    title: 'Wild nature <br> safe adventure',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde veniam aperiam rerum quis atque, illum.'
+                },
+                second: {
+                    title: 'The best view comes <br> after the hardest climb',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde veniam aperiam rerum quis atque, illum.'
+                }
             }
         },
+
         descriptions: {
             about: {
                 title: 'About us',
@@ -18,6 +29,26 @@ export default {
             },
             trips: {
                 title: 'FEATURED TRIPS',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            gallery: {
+                title: 'GALLERY',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            similarTrips: {
+                title: 'similar trips',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            moreInfo: {
+                title: 'more info',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            team: {
+                title: 'OUR FABULOUS TEAM',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+            },
+            latestBlogs: {
+                title: 'LATEST OF OUR BLOG',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
             }
         },
