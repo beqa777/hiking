@@ -18,7 +18,7 @@ const Navbar = ({ t, i18n, scroll }) => {
                         }}
                         countries={["US", "GE"]}
                         customLabels={{ "US": "USA", "GE": "GEO" }}
-                        defaultCountry={language === "eng" ? "US" : "GE"}
+                        defaultCountry={language === "geo" ? "GE" : "US"}
                     />
                 </FlagHolderStyle>
                 <Menu scroll={scroll}>
